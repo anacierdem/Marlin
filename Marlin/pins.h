@@ -231,6 +231,9 @@
 #elif MB(5DPRINT)
   #include "pins_5DPRINT.h"           // AT90USB1286
 
+#elif MB(LICI)
+  #include "pins_LICI.h"
+
 #else
   #error "Unknown MOTHERBOARD value set in Configuration.h"
 #endif

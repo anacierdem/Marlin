@@ -55,6 +55,8 @@
 
 #define TEMP_BED_PIN        14   // ANALOG NUMBERING
 
+#define SERVO0_PIN          40
+
 #if ENABLED(ULTRA_LCD)
   #if ENABLED(NEWPANEL)
     #define LCD_PINS_RS 	16

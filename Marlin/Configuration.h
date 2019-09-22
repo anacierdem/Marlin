@@ -335,7 +335,7 @@
 
 // Comment the following line to disable PID and enable bang-bang.
 #define PIDTEMP
-#define BANG_MAX 100 // limits current to nozzle while in bang-bang mode; 255=full current
+#define BANG_MAX 50 // limits current to nozzle while in bang-bang mode; 255=full current
 #define PID_MAX BANG_MAX // limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #if ENABLED(PIDTEMP)
   //#define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
@@ -366,9 +366,9 @@
   //#define  DEFAULT_Kd 440
 
   //Lici Custom
-  #define  DEFAULT_Kp 7.00
-  #define  DEFAULT_Ki 0.66
-  #define  DEFAULT_Kd 18.57
+  #define  DEFAULT_Kp 6.84
+  #define  DEFAULT_Ki 0.52
+  #define  DEFAULT_Kd 22.26
 
 #endif // PIDTEMP
 

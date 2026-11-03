@@ -1,5 +1,21 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python
 
-for opt in "$@" ; do
-  eval "sed -i 's/\/\/[[:blank:]]*\(#define \b${opt}\b\)/\1/g' Marlin/Configuration.h"
-done
+import sys, os, config
+
+def main():
+    args = sys.argv[1:]
+
+    for name in args:
+        changed = False
+
+        for file in config.FILES:
+            if os.path.exists(file):
+                if config.enable(file, name):
+                    changed = True
+
+        if not changed:
+            print(f"ERROR: Can't find {name}")
+            exit(1)
+
+if __name__ == "__main__":
+    main()

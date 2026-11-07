@@ -300,6 +300,10 @@
 #elif MB(WEEDO_62A)
   #include "mega/pins_WEEDO_62A.h"                  // ATmega2560                           env:mega2560
 
+#elif MB(LICI)
+  #include "mega/pins_LICI.h"                       // ATmega2560                           env:mega2560
+
+
 //
 // ATmega1281, ATmega2561
 //
